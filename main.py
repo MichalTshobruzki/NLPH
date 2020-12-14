@@ -2,7 +2,7 @@ import requests
 import json
 import pandas as pd
 import os
-
+import GUI
 
 TOKENIZED = 'tokenized_text'
 SEGMENTED = 'segmented_text'
@@ -11,7 +11,10 @@ DEPENDENCY_TREE = 'dep_tree'
 MA_LATTICE = 'ma_lattice'
 MD_LATTICE = 'md_lattice'
 
-text = "בתוך עיניה הכחולות"
+
+text = GUI.start_gui()
+print(type(text))
+#text = "בתוך עיניה הכחולות"
 # Escape double quotes in JSON.
 
 text = text.replace(r'"', r'\"')
